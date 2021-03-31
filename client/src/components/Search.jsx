@@ -76,9 +76,7 @@ export default class Search extends Component {
                     }
                     else {
 
-                        // this.setState({ searchError: 'movie mot find' })
                         this.setState({ isLoaded: true, searchError: <Lottie options={notFound} height={150} width={250} /> })
-
                     }
                 })
         }
@@ -107,7 +105,6 @@ export default class Search extends Component {
                 if (res.data[0].movies === undefined) {
 
                     axios.post(`/api/addmovie/${this.props.user._id}`, { movie })
-                    alert('The movie was successfully added to the favorites list')
                 }
                 else {
                     let find = 0
@@ -124,7 +121,6 @@ export default class Search extends Component {
                     }
                     else {
                         axios.post(`/api/addmovie/${this.props.user._id}`, { movie })
-                        alert('The movie was successfully added to the favorites list')
                     }
                 }
             })
