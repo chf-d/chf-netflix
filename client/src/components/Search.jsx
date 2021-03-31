@@ -15,6 +15,11 @@ export default class Search extends Component {
         }
     }
 
+    componentDidMount() {
+
+        this.findMovie('test')
+    }
+
     findMovie = async (Search) => {
 
         this.setState({ searchError: '', movies: [], isLoaded: false })

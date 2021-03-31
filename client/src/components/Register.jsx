@@ -17,11 +17,11 @@ class Register extends Component {
     }
 
     validUsername = (e) => {
-        this.setState({ username: e.target.value })
+        this.setState({ username: e.target.value.toLowerCase() })
     }
 
     validPassword = (e) => {
-        this.setState({ password: e.target.value })
+        this.setState({ password: e.target.value.toLowerCase() })
     }
 
     validEmail = (e) => {
