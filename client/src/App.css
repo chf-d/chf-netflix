@@ -1,0 +1,135 @@
+html,body{
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #fff;
+  background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/92bb3a0b-7e91-40a0-b27b-f2c3ac9ef6e4/ab38bb40-7ffb-44a0-b628-90803ccd534b/IL-he-20210322-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1{
+  padding-bottom: 30px;
+}
+
+h2 {
+  margin: 30px 10px 0px 10px;
+}
+
+h4{
+  margin: 10px;
+}
+
+input , button{
+  background: #333;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  height: 25px;
+  width: 300px;
+  padding: 10px 20px;
+  outline: none;
+  margin: 10px;
+}
+
+button ,#submit{
+  cursor: pointer;
+  height: 45px;
+  width: 340px;
+  background: #e50914;
+  font-weight: 600;
+  font-size: 16px;
+}
+button:active ,#submit:active{
+  background: #f84450;
+}
+
+img{
+  width: 200px;
+  height: 300px;
+}
+
+#register{
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+}
+#register:hover{
+  text-decoration: underline;
+}
+
+.Home ,.register ,.user{
+  min-width:300px;
+  min-height: 350px;
+  padding: 60px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+}
+
+#search{
+  padding-bottom: 0;
+}
+
+.movie{
+  width: 200px;
+  height: 300px;
+  background-color: #e50914;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  transition: 1.0s;
+  cursor: pointer;
+  position: relative;
+}
+
+.rotateY{
+  transform: rotateY(180deg);
+}
+
+.movieButton{
+  width: 170px;
+  font-size: 16px;
+  padding: 0;
+  background-color: #333;
+  position: absolute;
+  top: 200px;
+  right: 5px;
+}
+
+
+
+
+@media (max-width: 500px){
+
+  .Home ,.register ,.user{
+    max-width:300px;
+    padding: 10px;
+  }
+
+  input {
+    width: 200px;
+  }
+
+  button{
+    width: 90px;
+    padding: 0px;
+    margin: 4px;
+  }
+
+  #enter ,#submit{
+    width: 240px;
+  }
+
+  .movieButton{
+    right:10px;
+  }
+
+}
