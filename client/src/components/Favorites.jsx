@@ -1,5 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Lottie from 'react-lottie'
+import loadingData from '../animations/loading.json'
+
+const loading = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingData,
+    rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+    }
+};
 
 export default class Favorites extends Component {
 
@@ -68,7 +79,7 @@ export default class Favorites extends Component {
 
         if (!this.state.isLoaded) {
 
-            return <h1>Loading...</h1>
+            return <Lottie options={loading} height={250} width={250} />
         }
         else if (this.state.user[0].movies.length < 1) {
 

@@ -1,5 +1,26 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Lottie from 'react-lottie'
+import loadingData from '../animations/loading.json'
+import notFoundData from '../animations/notFound.json'
+
+const loading = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingData,
+    rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+    }
+};
+
+const notFound = {
+    loop: true,
+    autoplay: true,
+    animationData: notFoundData,
+    rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+    }
+};
 
 export default class Search extends Component {
 
@@ -55,7 +76,9 @@ export default class Search extends Component {
                     }
                     else {
 
-                        this.setState({ searchError: 'movie mot find' })
+                        // this.setState({ searchError: 'movie mot find' })
+                        this.setState({ isLoaded: true, searchError: <Lottie options={notFound} height={150} width={250} /> })
+
                     }
                 })
         }
@@ -112,7 +135,7 @@ export default class Search extends Component {
     loading = () => {
         if (!this.state.isLoaded) {
 
-            return <h1>Loading...</h1>
+            return <Lottie options={loading} height={250} width={250} />
         }
     }
 
