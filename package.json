@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "install-client": "npm install --prefix ../client",
-    "build": "npm run build --prefix ../client",
+    "install-client": "npm install --prefix ./client",
+    "build": "npm run build --prefix ./client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm run start --prefix ../client",
+    "client": "npm run start --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build"
   },
